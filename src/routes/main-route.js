@@ -20,15 +20,15 @@ class MainRoute extends PolymerElement {
           flex-wrap: wrap;
         }
         .side {
-          width: 280px;
-          padding-left: 30px;
+		  width:280px;
+		  padding-left: 30px;
         }
         .main {
           flex-grow: 1;
         }
         h1 {
           color: var(--blue-text);
-          font-size: 33px;
+          font-size: 2.063rem;
           font-weight: 500;
         }
         .tile-holder {
@@ -118,10 +118,43 @@ class MainRoute extends PolymerElement {
 		.mobile-signup-buttons{
 			display:none;
 		}
-		@media only screen and (max-width: 600px){
+		.mobile-signup-buttons button{
+			color: var(--blue-navigation);
+			font-size: 14px;
+			font-weight: 600;
+			cursor: pointer;
+			border-radius: 3px;
+		}
+		.mobile-signup-buttons button.selected{
+			color: white;
+			background-color: var(--blue-button);
+		}
+
+
+		@media only screen and (max-width: 480px){
+
+		}
+
+		@media only screen and (max-width: 768px){
 			.mobile-signup-buttons{
 				display:block;
 			}
+
+			.side {
+				width: 100%;
+				padding-left: auto;
+			}
+
+			.square {
+				width: 100%;
+				min-height: 400px;
+				margin-right: 24px;
+				margin-bottom: 24px;
+			}
+		}
+
+
+		@media only screen and (max-width: 992px){}
 
       p {
         font-size: 11px;
@@ -151,7 +184,7 @@ class MainRoute extends PolymerElement {
 
           <div class="mobile-signup-buttons">
             <button class="btn-critical" on-click="_signIn">Sign In</button>
-            <button class="btn-critical" on-click="_joinNow">Join Now</button>
+            <button class="btn-critical selected" on-click="_joinNow">Join Now</button>
           </div>
           
           <div class="tile-holder">
