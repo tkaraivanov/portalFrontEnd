@@ -16,16 +16,24 @@ class WorbliScatter extends PolymerElement {
         },
         scatter: {
             type: Object,
+        },
+        scatterOpen: {
+            type: Boolean,
+            value: false,
         }
     };
   }
 
   _connect(){
     console.log(ScatterJS);
+    console.log(ScatterEOS);
     ScatterJS.plugins( new ScatterEOS() );
-    ScatterJS.scatter.connect("WORBLI").then(connected => {
+    ScatterJS.scatter.connect("WORBLI")
+    .then(connected => {
+        this.scatterOpen = connected;
         if(!connected) return false;
-        this.scatter = ScatterJS.scatter;    
+        this.scatter = ScatterJS.scatter;  
+        console.log(this.scatter);  
         window.ScatterJS = null;
     });
   }
