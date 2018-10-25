@@ -1,6 +1,7 @@
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import '../../css/shared-styles.js';
 import '../../components/worbli-footer.js';
+import '../../components/worbli-scatter.js';
 
 class ClaimRoute extends PolymerElement {
   static get template() {
@@ -164,6 +165,8 @@ class ClaimRoute extends PolymerElement {
         gtag('js', new Date());
         gtag('config', 'UA-117118714-1');
       </script>
+
+      <worbli-scatter connect></worbli-scatter
 
       <div class="split">
         <div class="side">
