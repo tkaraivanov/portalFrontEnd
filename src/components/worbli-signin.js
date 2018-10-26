@@ -95,4 +95,8 @@ _join(){
     this.join = true;
 }
 
+_checkPassword(){
+	console.log("here");
+}
+
 } window.customElements.define('worbli-signin', WorbliSignin);

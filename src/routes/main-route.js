@@ -104,7 +104,8 @@ class MainRoute extends PolymerElement {
         }
         .box-link {
           text-decoration: none;
-          color: #393E46;
+		  color: #393E46;
+		  
         } 
         .btn-signin {
           display: block;
@@ -142,7 +143,7 @@ class MainRoute extends PolymerElement {
 
 			.side {
 				width: 100%;
-				padding-left: auto;
+				padding-left: 0;
 			}
 
 			.square {
@@ -151,6 +152,7 @@ class MainRoute extends PolymerElement {
 				margin-right: 24px;
 				margin-bottom: 24px;
 			}
+
 		}
 
 

@@ -109,7 +109,7 @@ class WorbliHeader extends PolymerElement {
           <button type="button" on-click="_signIn" tabindex="5">SIGN IN</button>
           <button type="button" class="selected" on-click="_join" tabindex="6">JOIN NOW</button>
         </div>
-	    </div>
+	 </div>
     `;
   }
   static get properties() {
